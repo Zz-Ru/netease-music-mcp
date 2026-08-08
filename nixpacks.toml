@@ -1,0 +1,8 @@
+[phases.setup]
+nixPkgs = ["python314"]
+
+[phases.build]
+cmds = []
+
+[start]
+cmd = "cd server/mcp-server && python server.py"
