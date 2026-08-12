@@ -5,4 +5,4 @@ nixPkgs = ["python3"]
 cmds = []
 
 [start]
-cmd = "cd server/mcp-server && python server.py"
+cmd = "python server.py"
