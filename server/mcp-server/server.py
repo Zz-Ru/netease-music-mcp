@@ -246,8 +246,8 @@ class MCPHandler(http.server.BaseHTTPRequestHandler):
         self.send_response(200)
         self._cors()
         self.end_headers()
-    def do_GET(self):
-        if self.path == '/health':
+  def do_GET(self):
+    if self.path == '/health' or self.path.startswith('/mcp'):
             self._json_response({"status": "ok", "tools": len(TOOLS)})
         elif self.path.startswith('/sse'):
             self._handle_sse()
